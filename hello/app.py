@@ -6,9 +6,10 @@ app = Flask(__name__)
 
 def index():
   #name = request.args["name"] #creating variable titled "name", setting it to request....
-  name = request.args.get("name", "world")
+  name = request.form.get("name", "world")
     #.get is a function that comes with a dictionary
     # if you didn't specify "world" as the fallback, would default to None
+    #request.args is for get, request.forms is for post
   return render_template("index.html") 
   #return render_template("index.html", name=name) 
 #(Creates?) argument (i.e., named parameter) titled "placeholder," value of this argument set to name
@@ -19,7 +20,9 @@ def index():
 
 
     
-@app.route("/greet")
+@app.route("/greet", methods=["POST"])
+
 def greet():
   name = request.args.get("name","world")
   return render_template("greet.html", name=name) 
+ 
