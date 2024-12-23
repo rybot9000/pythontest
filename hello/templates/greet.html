@@ -1,7 +1,8 @@
 {% extends "layout.html" %} 
 {% block body %}
 
-  hello, {{ name }}
+  hello, {% if name %}{{ name }}{% else %}world{% endif %}
+  <!--passing {{ name }} simply would send variable, wrap in addition {} to put in logic-->
 
 {% endblock %}
-<!--#jinja coding-->
+<!--#jinja coding, 53mins, can do some light conditionals in jinja-->
