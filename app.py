@@ -49,3 +49,6 @@ def register():
 def registrants():
     registrants = db.execute("SELECT * FROM registrants")
     return render_template("registrants.html", registrants=registrants)
+
+if __name__ == "__main__":
+    app.run(debug = True)
