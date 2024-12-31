@@ -7,15 +7,27 @@
                 color: brown; 
                 text-align: center;
             }
-
+            div {
+                border: 7px solid cornflowerblue;
+                font-family: Arial, sans-serif;
+                font-size: 28px;
+                font-weight: bold;
+                background-color: blue;
+                width:200px;
+                height: 400px;
+                padding:20px;
+            }
+            #foo {color:pink;}
         </style>
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <h1>this is an h1 heading styled from styles.css</h1>
-        <h2>this is an h2 heading with page-specific CSS </h2>
-        <h3 style="color: blue; text-align: center;">this is an h3 heading with in-line styling</h3>
+        <h2>this is an h2 heading w/page-specific CSS </h2>
+        <h2 id="foo">this is an h2 heading w/ID-specific CSS</h2>
+        <h3 style="color: blue; text-align: center;">this is an h3 heading w/in-line styling</h3>
 
         On this page, we practice CSS
+        <div>Here, we practice div formatting</div>
     </body>
 </html>
