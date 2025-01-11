@@ -10,4 +10,8 @@ def mom(request):
     return HttpResponse("I love you")
 
 def greet(request,name):
-    return HttpResponse(f"Hello, {name.capitalize()}!")
+    #return HttpResponse(f"Hello, {name.capitalize()}!") old way, using httpresponse instead of render
+    return render(request, "hello/greet.html", {
+        "name": name.capitalize()
+        }
+    )
